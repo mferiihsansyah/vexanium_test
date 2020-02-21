@@ -3,7 +3,7 @@
     
     
     $arr1 = array(
-        " ", "A","B","D","E","G","H","I","R","Q","O","N","K","S",
+        "A","B","D","E","G","H","I","R","Q","O","N","K","S",
         "T","U","V","Y"
     );
     $i = array_reverse($arr1);
@@ -16,8 +16,13 @@
     
     foreach($arr2 as $x){
         $y = $x-24;
-       echo "$i[$y]";
-      
+        
+        if(array_key_exists($y,$i)){
+            $var = $i[$y];
+            echo $var;
+        }else{
+            echo " ";
+        }
     }
     
 ?>
